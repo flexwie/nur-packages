@@ -12,22 +12,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "07dq44309q25lgzrq9fr6n5gsj610cic8qgrcpipl0n6z5kvw1km";
-    aarch64-linux = "13v5j74470i9f31zbbrzcci8xi0c3p3ifk6mabqpwz90r3a4q543";
-    x86_64-darwin = "01l435bss7c8i75ps64gbns56kx9waiwp9vgf9mqjdwrm5fnm24h";
-    aarch64-darwin = "01l435bss7c8i75ps64gbns56kx9waiwp9vgf9mqjdwrm5fnm24h";
+    x86_64-linux = "0sc5n0nw48sy0nndz8rd7cih433jfkhikiby013f8scpf2vsqgwq";
+    aarch64-linux = "1hvhgd5dmbi4dvzr9lan8y49srbjbl2x7hwjgbk0kix592zqg54d";
+    x86_64-darwin = "07qg9wghnrv26azwngkngg8s77y805wi6q3vma5is0w5bd3yn72p";
+    aarch64-darwin = "07qg9wghnrv26azwngkngg8s77y805wi6q3vma5is0w5bd3yn72p";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/flexwie/ghs/releases/download/v0.1/ghs_0.1_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/flexwie/ghs/releases/download/v0.1/ghs_0.1_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/flexwie/ghs/releases/download/v0.1/ghs_0.1_darwin_all.tar.gz";
-    aarch64-darwin = "https://github.com/flexwie/ghs/releases/download/v0.1/ghs_0.1_darwin_all.tar.gz";
+    x86_64-linux = "https://github.com/flexwie/ghs/releases/download/v0.2/ghs_0.2_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/flexwie/ghs/releases/download/v0.2/ghs_0.2_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/flexwie/ghs/releases/download/v0.2/ghs_0.2_darwin_all.tar.gz";
+    aarch64-darwin = "https://github.com/flexwie/ghs/releases/download/v0.2/ghs_0.2_darwin_all.tar.gz";
   };
 in
 pkgs.stdenv.mkDerivation {
   pname = "ghs";
-  version = "0.1";
+  version = "0.2";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
