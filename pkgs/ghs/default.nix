@@ -48,7 +48,7 @@ pkgs.stdenv.mkDerivation {
   meta = {
     description = "a npx-like script execution for gists";
     homepage = "https://github.com/flexwie/ghs";
-    license = lib.licenses.MIT;
+    license = lib.licenses.mit;
 
     platforms = [
       "aarch64-darwin"
